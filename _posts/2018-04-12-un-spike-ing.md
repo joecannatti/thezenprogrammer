@@ -2,20 +2,18 @@
 title:  "Un-spike-ing"
 date:   2018-04-12
 categories: spikes refactoring
-layout: null
+layout: posts
 ---
-
-# Un-spike-ing a Spike
 
 Writing code is often the best way to figure out what exactly needs to be done to solve a problem. In the Agile world, they call this a [Spike](http://agiledictionary.com/209/spike/).
 
 A spike is when a software developer sits done and starts trying little bits of code in order to build a map of all they code they are going to need to eventually write.
 
--   It’s a way of quickly hacking out code to do stuff like
-    -   querying the database to see what’s in there and how it fits together
-    -   calling 3rd party APIs to see how they work
-    -   Testing the algorithm that Fred said would work in Slack to see if he’s right
-    -   Anything else that might need verified before committing to a design of a solution.
+It’s a way of quickly hacking out code to do stuff like:
+- querying the database to see what’s in there and how it fits together
+- calling 3rd party APIs to see how they work
+- Testing the algorithm that Fred said would work in Slack to see if he’s right
+- Anything else that might need verified before committing to a design of a solution.
 
 Spikes usually result in a bunch of messy code that kinda/sorta does most of the things that the product is going to need to do in the end. To most programmers, it feels good to do a spike. The gratification that comes from building a production ready system comes much more quickly in a spike. Because of that, there’s a temptation to feel that most of the work is done when the spike is done.
 
