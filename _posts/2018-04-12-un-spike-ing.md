@@ -2,7 +2,7 @@
 title:  "Un-spike-ing"
 date:   2018-04-12
 categories: spikes refactoring
-layout: posts
+layout: post
 ---
 
 Writing code is often the best way to figure out what exactly needs to be done to solve a problem. In the Agile world, they call this a [Spike](http://agiledictionary.com/209/spike/).
@@ -15,9 +15,12 @@ It’s a way of quickly hacking out code to do stuff like:
 - Testing the algorithm that Fred said would work in Slack to see if he’s right
 - Anything else that might need verified before committing to a design of a solution.
 
-Spikes usually result in a bunch of messy code that kinda/sorta does most of the things that the product is going to need to do in the end. To most programmers, it feels good to do a spike. The gratification that comes from building a production ready system comes much more quickly in a spike. Because of that, there’s a temptation to feel that most of the work is done when the spike is done.
+Spikes usually result in a bunch of messy code that kinda/sorta does most of the things that the product is going to need to do in the end.
+To most programmers, it feels good to do a spike.
+The gratification that comes from building a production ready system comes much more quickly in a spike. Because of that, there’s a temptation to feel that most of the work is done when the spike is done.
+It makes me feel like an unstoppable force of nature, slicing through time and space, totally unaware of my colossal mediocrity.
 
-Something like, “I just need to clean up the code from the Spike and open a PR”, is often said by a developer. This creates the impression that there’s not much work left to do. The bad news is that that impression is often false. The good news is that I’m going to tell you how to deal with that bad news right now.
+What comes next is often something like, “I just need to clean up the code from the Spike and open a PR”, by a developer. This creates the impression that there’s not much work left to do. The bad news is that that impression is often false. The good news is that I’m going to tell you how to deal with that bad news right now.
 
 ## What’s tangibly different between Spike code and Production code?
 
@@ -87,34 +90,34 @@ I like to compare the branch with master (or develop) on Github so that I can se
 
 ## How do we get out of this mess?
 
-### Take relevant bits of code and put them into some sort of notes document.
+####  1. Take relevant bits of code and put them into some sort of notes document.
 
-I’ll spare you a rant about how I love emacs/org-mode for this sort of thing with all my heart…
+   I’ll spare you a rant about how I love emacs/org-mode for this sort of thing with all my heart…
 
-### Look at each one and type up what it does, how it does it, and (most importantly) what’s not perfect about it.
+####  2. Look at each one and type up what it does, how it does it, and (most importantly) what’s not perfect about it.
 
 You might think you already know these things and can skip this step, but don’t!
 
-### Create a new branch off of master (or develop or whatever) that does not include your spike code.
+#### 3. Create a new branch off of master (or develop or whatever) that does not include your spike code.
 
-### Decide the smallest chunk of functionality that would make for a complete Pull Request
+#### 4. Decide the smallest chunk of functionality that would make for a complete Pull Request
 
 In my most recent spike, I’m aiming to turn it into pull requests that go the basically the following
 
--   Setup the credentials for accessing the APIs involved
--   Pulled the data from the apis
--   Setup the OO design to do the computations on that data
--   One PR for each field that was computed
+  1.   Setup the credentials for accessing the APIs involved
+  1.   Pulled the data from the apis
+  1.   Setup the OO design to do the computations on that data
+  1.   One PR for each field that was computed
 
 This will be somewhere between 5 and 10 PRs
 
-### Build that functionality. Reach for the code snippets in your notes from your spike as you need them.
+#### 5. Build that functionality. Reach for the code snippets in your notes from your spike as you need them.
 
-### Take a special pass with each snippet you copy in to make sure all paths through are code are fully covered with unit tests and any short comings that you wrote up earlier are addressed.
+#### 6. Take a special pass with each snippet you copy in to make sure all paths through are code are fully covered with unit tests and any short comings that you wrote up earlier are addressed.
 
-### Open that PR, get feedback, make changes, merge.
+#### 7. Open that PR, get feedback, make changes, merge.
 
-### Go back to \`Create a new branch…\` and repeat until all the work is done
+#### 8. Go back to \`Create a new branch…\` and repeat until all the work is done
 
 ## There’s an art to this…
 
