@@ -7,7 +7,7 @@ layout: post
 
 Writing code is often the best way to figure out what exactly needs to be done to solve a problem. In the Agile world, they call this a [Spike](http://agiledictionary.com/209/spike/).
 
-A spike is when a software developer sits done and starts writing little bits of code with the goal of building a map of all the work they are going to need to eventually do to complete a project.
+A spike is when a software developer sits down and starts writing little bits of code with the goal of building a map of all the work they are going to need to eventually do to complete a project.
 
 It’s a way of quickly hacking out code that does stuff like:
 - Querying the database to see what’s in there and how it fits together
